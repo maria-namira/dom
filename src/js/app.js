@@ -1,6 +1,8 @@
-import GamePlay from './GamePlay';
+import data from './data';
+import Table from './Table';
 
-const gamePlay = new GamePlay();
-gamePlay.bindToDOM(document.getElementById('game-container'));
+const table = new Table(data);
 
-gamePlay.init();
+table.bindToDOM(document.getElementById('container'));
+table.drawTable();
+table.startSorting();
